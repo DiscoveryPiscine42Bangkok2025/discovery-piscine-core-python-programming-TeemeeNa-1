@@ -1,8 +1,6 @@
-text = input()
+import sys
 
-words = text.split()
-
-if len(words) > 0:
-    print(words[0])
+if len(sys.argv) > 1:
+    print(sys.argv[1].split()[0])
 else:
     print("none")

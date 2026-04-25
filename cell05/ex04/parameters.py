@@ -1,3 +1,2 @@
-A = input("What you gotta say? : ")
-while A != "STOP":
-    A = input("I got that! Anything else?: ")
+import sys
+print(f"Number of parameters: {len(sys.argv) - 1}.")

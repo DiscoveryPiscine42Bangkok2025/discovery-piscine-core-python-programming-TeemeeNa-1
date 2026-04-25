@@ -1,0 +1,9 @@
+import sys
+
+A = sys.argv[1]
+B = input("What was the parameters? : ")
+
+if A.strip() == B.strip():
+    print("Great Job")
+else:
+    print("Nope... Sorry")
