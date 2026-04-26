@@ -1,0 +1,7 @@
+import sys
+
+def lowercase_it():
+    for arg in sys.argv[1:]:
+        print(arg.lower())
+
+lowercase_it()

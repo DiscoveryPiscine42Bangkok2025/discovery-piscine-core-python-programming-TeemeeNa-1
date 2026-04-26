@@ -1,0 +1,5 @@
+A = "hello"
+def upcase_it():
+    print(A.upper())
+
+upcase_it()

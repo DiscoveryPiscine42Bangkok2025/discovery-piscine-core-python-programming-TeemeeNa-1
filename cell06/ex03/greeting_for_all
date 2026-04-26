@@ -1,0 +1,9 @@
+def greeting(value):
+    if value.isalpha() == False:
+        print("Error! It was not a name")
+    elif value == "":
+        print("Hello, Noble  Stranger!")
+    else:
+        print(f"Hello, {value}!")
+
+greeting(input())
