@@ -1,0 +1,10 @@
+import sys
+
+B = sys.argv[1:]   # ← this is the key fix
+
+if len(B) <= 1:
+    print("none")
+else:
+    print(f"parameters : {len(B)}")
+    for word in B[0:]:
+        print(f"{word} : {len(word)}")
