@@ -1,8 +1,10 @@
-def checkmate(board):
+def checkmate(board:str):
     try:
-        grid = [row for row in board.split("\n") if row]
+        print(board)
+        grid = board.split()
+        
         n = len(grid)
-
+        print(grid,n)
         if n == 0 or any(len(row) != n for row in grid):
             print("Error")
             return
@@ -14,9 +16,9 @@ def checkmate(board):
             for j in range(n):
                 if grid[i][j] == "K":
                     kings.append((i, j))
-
+        print(kings)
         if len(kings) != 1:
-            print("Error")
+            print("Error, Not only one king.")
             return
 
         kx, ky = kings[0]
@@ -25,6 +27,7 @@ def checkmate(board):
             return 0 <= x < n and 0 <= y < n
 
         # ✅ Pawn (reversed rule: pawn below king)
+
         for dx, dy in [(1, -1), (1, 1)]:
             x, y = kx + dx, ky + dy
             if inside(x, y) and grid[x][y] == "P":
