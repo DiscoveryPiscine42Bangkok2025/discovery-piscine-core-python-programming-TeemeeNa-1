@@ -26,7 +26,7 @@ def checkmate(board:str):
         def inside(x, y):
             return 0 <= x < n and 0 <= y < n
 
-        # ✅ Pawn (reversed rule: pawn below king)
+        # Pawn (reversed rule: pawn below king)
 
         for dx, dy in [(1, -1), (1, 1)]:
             x, y = kx + dx, ky + dy
@@ -34,7 +34,7 @@ def checkmate(board:str):
                 print("Success")
                 return
 
-        # ✅ Rook + Queen (straight) — FIXED
+        # Rook + Queen (straight) — FIXED
         for dx, dy in [(1,0), (-1,0), (0,1), (0,-1)]:
             x, y = kx + dx, ky + dy
             while inside(x, y):
@@ -46,7 +46,7 @@ def checkmate(board:str):
                 x += dx
                 y += dy
 
-        # ✅ Bishop + Queen (diagonal) — FIXED
+        # Bishop + Queen (diagonal) — FIXED
         for dx, dy in [(1,1), (1,-1), (-1,1), (-1,-1)]:
             x, y = kx + dx, ky + dy
             while inside(x, y):
